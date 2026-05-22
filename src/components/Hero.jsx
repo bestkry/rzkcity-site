@@ -51,7 +51,7 @@ export default function Hero() {
             muted
             loop
             playsInline
-            // poster="./hero-poster.jpg"  // optional: place a poster image at /public/hero-poster.jpg
+            poster="./hero-poster.jpg"
             onError={() => setVideoError(true)}
             className="opacity-70"
           >

@@ -35,8 +35,8 @@ The hero ships with a CSS gradient + grid fallback so it looks complete without 
 2. Drop the file(s) into `public/`:
    - `public/hero-video.mp4` (required)
    - `public/hero-video.webm` (optional, smaller modern variant)
-   - `public/hero-poster.jpg` (optional poster — un-comment the `poster` attr in `src/components/Hero.jsx`)
-3. Rebuild — `npm run build`. The `<video>` element auto-loads them; the fallback stays beneath.
+   - `public/hero-poster.jpg` (poster/fallback frame used before playback starts)
+3. Rebuild — `npm run build`. The `<video>` element auto-loads them; the CSS fallback stays beneath.
 
 Files are referenced as `./hero-video.mp4` so they work from any deploy path (S3 preview, GitHub Pages project pages, root domain).
 
