@@ -45,6 +45,12 @@ Files are referenced as `./hero-video.mp4` so they work from any deploy path (S3
 - **Discord invite:** edit `DISCORD_URL` near the top of `src/components/DiscordSocials.jsx`. Currently set to the placeholder `https://discord.gg/rzkcity`.
 - **Social handles:** edit the `SOCIALS` array in the same file (name, handle, href).
 
+## Updating the shop
+
+- **Shop / Tebex URL:** edit `SHOP_URL` near the top of `src/components/Shop.jsx`. It is currently set to `https://rzkcity.tebex.io` as a placeholder.
+- **Packages and perks:** edit the `packages` array in `src/components/Shop.jsx`.
+- **Prices:** add a `price` field to each package card if final prices should be shown on the site.
+
 ## Updating mode media and custom textures
 
 - **Skyblock animation:** replace `public/skyblock-animation.mp4`. The file is referenced from the Skyblock mode card in `src/components/Modes.jsx`.

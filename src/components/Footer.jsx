@@ -43,6 +43,7 @@ export default function Footer() {
           <ul className="grid grid-cols-2 gap-y-2 text-[13px] text-bone/65">
             <li><a className="hover:text-gold-bright" href="#tryby">Tryby</a></li>
             <li><a className="hover:text-gold-bright" href="#build">Świat</a></li>
+            <li><a className="hover:text-gold-bright" href="#sklep">Sklep</a></li>
             <li><a className="hover:text-gold-bright" href="#discord">Discord</a></li>
             <li><a className="hover:text-gold-bright" href="#top">Góra</a></li>
           </ul>

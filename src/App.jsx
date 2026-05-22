@@ -3,6 +3,7 @@ import Nav from './components/Nav.jsx';
 import Hero from './components/Hero.jsx';
 import VoxelBuild from './components/VoxelBuild.jsx';
 import Modes from './components/Modes.jsx';
+import Shop from './components/Shop.jsx';
 import DiscordSocials from './components/DiscordSocials.jsx';
 import Footer from './components/Footer.jsx';
 
@@ -20,6 +21,7 @@ export default function App() {
         <Hero />
         <VoxelBuild />
         <Modes />
+        <Shop />
         <DiscordSocials />
       </main>
       <Footer />

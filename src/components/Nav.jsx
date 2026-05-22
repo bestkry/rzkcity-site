@@ -4,6 +4,7 @@ import Logo from './Logo.jsx';
 const links = [
   { href: '#tryby', label: 'Tryby' },
   { href: '#build', label: 'Świat' },
+  { href: '#sklep', label: 'Sklep' },
   { href: '#discord', label: 'Discord' },
 ];
 
