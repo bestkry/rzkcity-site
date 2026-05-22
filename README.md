@@ -45,6 +45,12 @@ Files are referenced as `./hero-video.mp4` so they work from any deploy path (S3
 - **Discord invite:** edit `DISCORD_URL` near the top of `src/components/DiscordSocials.jsx`. Currently set to the placeholder `https://discord.gg/rzkcity`.
 - **Social handles:** edit the `SOCIALS` array in the same file (name, handle, href).
 
+## Updating mode media and custom textures
+
+- **Skyblock animation:** replace `public/skyblock-animation.mp4`. The file is referenced from the Skyblock mode card in `src/components/Modes.jsx`.
+- **Skyblock poster / fallback texture:** replace `public/skyblock-poster.jpg`.
+- **Custom block textures:** add files under `public/textures/` and reference them from CSS with `url('./textures/name.png')` or from React mode data as a media/poster asset. Keep web textures compressed (WebP/JPG for previews, PNG only when alpha or pixel-perfect edges are needed).
+
 ## Deployment
 
 ### Preview (S3, via deploy_website)

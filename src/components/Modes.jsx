@@ -18,6 +18,11 @@ const modes = [
       'Klasyczny rdzeń Skyblock z autorskimi misjami, ulepszeniami wyspy i rankingiem sezonowym. Grindy są krótkie, decyzje są długie.',
     tags: ['Wyspa', 'Misje', 'Ranking', 'Sezony'],
     accent: 'cyan',
+    media: {
+      src: './skyblock-animation.mp4',
+      poster: './skyblock-poster.jpg',
+      label: 'Skyblock island render',
+    },
   },
 ];
 
@@ -80,6 +85,27 @@ function ModeCard({ mode, large = false }) {
       </div>
 
       <div className="relative">
+        {mode.media && (
+          <div className="relative mb-7 aspect-video overflow-hidden rounded-sm border border-neon-cyan/25 bg-ink/70 shadow-neon-glow">
+            <video
+              className="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-[1.035] group-hover:opacity-100"
+              src={mode.media.src}
+              poster={mode.media.poster}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-label={mode.media.label}
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-neon-cyan/10" />
+            <div className="pointer-events-none absolute left-4 top-4 font-mono text-[10px] uppercase tracking-[0.25em] text-neon-cyan/80">
+              // skyblock render
+            </div>
+            <div className="pointer-events-none absolute bottom-4 right-4 h-2 w-16 bg-neon-cyan/80 shadow-[0_0_24px_rgba(91,231,255,0.8)]" />
+          </div>
+        )}
+
         <div className="flex items-center gap-3 text-[11px] tracking-[0.3em] uppercase text-bone/45">
           <span>{mode.code}</span>
           <span className="w-6 h-px bg-current opacity-30" />
