@@ -9,6 +9,12 @@ const modes = [
       'Survival multiplayer z ekonomią, ziemiami i sezonowymi wydarzeniami. Bez pay-to-win — graczy widać po tym, co zbudowali, nie po tym, co kupili.',
     tags: ['Survival', 'Eco', 'Land claim', 'Eventy'],
     accent: 'gold',
+    media: {
+      type: 'video',
+      src: './rzksmp-animation.mp4',
+      poster: './rzksmp-poster.jpg',
+      label: 'RZKSMP survival render',
+    },
   },
   {
     code: 'M.02',
@@ -19,6 +25,7 @@ const modes = [
     tags: ['Wyspa', 'Misje', 'Ranking', 'Sezony'],
     accent: 'cyan',
     media: {
+      type: 'video',
       src: './skyblock-animation.mp4',
       poster: './skyblock-poster.jpg',
       label: 'Skyblock island render',
@@ -86,23 +93,51 @@ function ModeCard({ mode, large = false }) {
 
       <div className="relative">
         {mode.media && (
-          <div className="relative mb-7 aspect-video overflow-hidden rounded-sm border border-neon-cyan/25 bg-ink/70 shadow-neon-glow">
-            <video
-              className="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-[1.035] group-hover:opacity-100"
-              src={mode.media.src}
-              poster={mode.media.poster}
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              aria-label={mode.media.label}
+          <div
+            className={`relative mb-7 aspect-video overflow-hidden rounded-sm bg-ink/70 ${
+              isGold ? 'border border-gold/25 shadow-gold-glow' : 'border border-neon-cyan/25 shadow-neon-glow'
+            }`}
+          >
+            {mode.media.type === 'video' ? (
+              <video
+                className="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-[1.035] group-hover:opacity-100"
+                src={mode.media.src}
+                poster={mode.media.poster}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                aria-label={mode.media.label}
+              />
+            ) : (
+              <img
+                className="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-[1.035] group-hover:opacity-100"
+                src={mode.media.src}
+                alt={mode.media.label}
+                loading="lazy"
+                decoding="async"
+              />
+            )}
+            <div
+              className={`pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent ${
+                isGold ? 'to-gold/10' : 'to-neon-cyan/10'
+              }`}
             />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-neon-cyan/10" />
-            <div className="pointer-events-none absolute left-4 top-4 font-mono text-[10px] uppercase tracking-[0.25em] text-neon-cyan/80">
-              // skyblock render
+            <div
+              className={`pointer-events-none absolute left-4 top-4 font-mono text-[10px] uppercase tracking-[0.25em] ${
+                isGold ? 'text-gold/80' : 'text-neon-cyan/80'
+              }`}
+            >
+              // {mode.name.toLowerCase()} render
             </div>
-            <div className="pointer-events-none absolute bottom-4 right-4 h-2 w-16 bg-neon-cyan/80 shadow-[0_0_24px_rgba(91,231,255,0.8)]" />
+            <div
+              className={`pointer-events-none absolute bottom-4 right-4 h-2 w-16 ${
+                isGold
+                  ? 'bg-gold/80 shadow-[0_0_24px_rgba(200,162,75,0.75)]'
+                  : 'bg-neon-cyan/80 shadow-[0_0_24px_rgba(91,231,255,0.8)]'
+              }`}
+            />
           </div>
         )}
 
