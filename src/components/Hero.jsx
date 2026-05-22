@@ -42,6 +42,8 @@ export default function Hero() {
     >
       {/* Video-ready background layer */}
       <div className="hero-media" aria-hidden="true">
+        {/* CSS fallback stays under the video. It is visible only while the video is loading/fails. */}
+        <div className="hero-fallback" />
         {!videoError && (
           <video
             ref={videoRef}
@@ -53,13 +55,10 @@ export default function Hero() {
             onError={() => setVideoError(true)}
             className="opacity-70"
           >
-            {/* Replace these sources with the generated hero video later. */}
-            <source src="./hero-video.webm" type="video/webm" />
+            {/* Replace this source with the generated hero video later. */}
             <source src="./hero-video.mp4" type="video/mp4" />
           </video>
         )}
-        {/* Always-on CSS fallback layer beneath the video — visible if the video is missing or fails */}
-        <div className="hero-fallback" />
         <div className="absolute inset-0 scanlines opacity-40 mix-blend-overlay" />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/40 via-ink/30 to-ink" />
       </div>
@@ -72,7 +71,7 @@ export default function Hero() {
             Serwer Minecraft · PL
           </div>
 
-          <h1 className="font-display uppercase leading-[0.92] tracking-tight headline-gradient headline-edge text-[clamp(2.6rem,8vw,7rem)]">
+          <h1 className="font-display uppercase leading-[0.95] tracking-[0.025em] headline-gradient headline-edge text-[clamp(2.4rem,7.3vw,6.4rem)]">
             Nocne miasto<br />
             <span className="text-gold">w blokach.</span>
           </h1>
@@ -109,7 +108,7 @@ export default function Hero() {
               <div className="text-gold/70 mb-1">// status</div>
               <div className="flex items-center gap-2 text-bone">
                 <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
-                Online · gracze online
+                Online · status serwera
               </div>
             </div>
             <div>
