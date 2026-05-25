@@ -105,26 +105,28 @@ export default function Hero() {
         </div>
 
         {/* Side meta column — asymmetric, breaks the symmetry */}
-        <aside className="lg:col-span-5 xl:col-span-4 lg:pl-8 lg:border-l lg:border-gold/15">
-          <div className="space-y-7 font-mono text-[11px] tracking-widest uppercase text-bone/55">
+        <aside className="lg:col-span-5 xl:col-span-4 lg:pl-8">
+          <div className="hero-meta-glass space-y-5 font-mono text-[11px] tracking-[0.18em] uppercase text-bone/72">
             <div>
-              <div className="text-gold/70 mb-1">// status</div>
-              <div className="flex items-center gap-2 text-bone">
-                <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
+              <div className="text-gold-bright/90 mb-2">// status</div>
+              <div className="flex items-center gap-2 text-bone font-semibold">
+                <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse shadow-[0_0_14px_rgba(52,211,153,0.9)]" />
                 Online · status serwera
               </div>
             </div>
             <div>
-              <div className="text-gold/70 mb-1">// tryby</div>
-              <div className="text-bone">RZKSMP · Skyblock</div>
+              <div className="text-gold-bright/90 mb-2">// tryby</div>
+              <div className="text-bone font-semibold">RZKSMP · Skyblock</div>
             </div>
             <div>
-              <div className="text-gold/70 mb-1">// kanał</div>
-              <div className="text-bone">discord.gg/6xcrKdMw46</div>
+              <div className="text-gold-bright/90 mb-2">// kanał</div>
+              <div className="text-bone font-semibold tracking-[0.12em] normal-case">
+                discord.gg/6xcrKdMw46
+              </div>
             </div>
-            <div className="pt-4 border-t border-gold/10">
-              <div className="text-gold/70 mb-2">// scroll</div>
-              <div className="flex items-center gap-3 text-bone">
+            <div className="pt-4 border-t border-gold/20">
+              <div className="text-gold-bright/90 mb-2">// scroll</div>
+              <div className="flex items-center gap-3 text-bone font-semibold">
                 <svg width="14" height="22" viewBox="0 0 14 22" fill="none" aria-hidden>
                   <rect x="0.5" y="0.5" width="13" height="21" rx="6.5" stroke="currentColor" />
                   <rect x="6" y="5" width="2" height="5" fill="currentColor">
