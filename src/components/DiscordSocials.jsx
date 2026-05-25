@@ -3,12 +3,12 @@ import React from 'react';
 /*
   Discord + Socials section.
 
-  Discord invite is a placeholder href — easily replaceable.
+  Discord invite is configured below.
   Search for DISCORD_URL in this file to change.
 
   To update other socials, edit the SOCIALS array below.
 */
-const DISCORD_URL = 'https://discord.gg/rzkcity'; // <-- TODO: replace with the real invite URL
+const DISCORD_URL = 'https://discord.gg/6xcrKdMw46';
 
 const SOCIALS = [
   { name: 'TikTok', handle: '@rzkcity', href: 'https://www.tiktok.com/@rzkcity' },
@@ -58,7 +58,7 @@ export default function DiscordSocials() {
                   Dołącz
                 </div>
                 <div className="font-mono text-[11px] tracking-widest uppercase text-bone/55 mt-1">
-                  discord.gg/rzkcity
+                  discord.gg/6xcrKdMw46
                 </div>
               </div>
               <span className="text-gold-bright translate-x-0 group-hover:translate-x-1 transition-transform">

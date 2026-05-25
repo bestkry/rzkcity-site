@@ -42,7 +42,7 @@ Files are referenced as `./hero-video.mp4` so they work from any deploy path (S3
 
 ## Updating Discord + socials
 
-- **Discord invite:** edit `DISCORD_URL` near the top of `src/components/DiscordSocials.jsx`. Currently set to the placeholder `https://discord.gg/rzkcity`.
+- **Discord invite:** edit `DISCORD_URL` near the top of `src/components/DiscordSocials.jsx`. Currently set to `https://discord.gg/6xcrKdMw46`.
 - **Social handles:** edit the `SOCIALS` array in the same file (name, handle, href).
 
 ## Updating the shop

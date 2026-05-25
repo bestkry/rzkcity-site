@@ -117,7 +117,7 @@ export default function Hero() {
             </div>
             <div>
               <div className="text-gold/70 mb-1">// kanał</div>
-              <div className="text-bone">discord.gg/rzkcity</div>
+              <div className="text-bone">discord.gg/6xcrKdMw46</div>
             </div>
             <div className="pt-4 border-t border-gold/10">
               <div className="text-gold/70 mb-2">// scroll</div>
