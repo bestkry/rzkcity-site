@@ -60,44 +60,47 @@ export default function Hero() {
           </video>
         )}
         <div className="absolute inset-0 scanlines opacity-40 mix-blend-overlay" />
-        <div className="absolute inset-0 bg-gradient-to-b from-ink/40 via-ink/30 to-ink" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ink/55 via-ink/35 to-ink" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_72%,rgba(6,6,10,0.86)_0%,rgba(6,6,10,0.52)_38%,rgba(6,6,10,0.08)_68%)]" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-5 sm:px-8 grid lg:grid-cols-12 gap-10 items-end">
         {/* Tag rail */}
         <div className="lg:col-span-7 xl:col-span-8">
-          <div className="flex items-center gap-3 text-[11px] tracking-[0.32em] uppercase text-gold/80 mb-6">
-            <span className="w-8 h-px bg-gold/50" />
-            Serwer Minecraft · PL
-          </div>
-
-          <h1 className="font-display uppercase leading-[0.95] tracking-[0.025em] headline-gradient headline-edge text-[clamp(2.4rem,7.3vw,6.4rem)]">
-            Nocne miasto<br />
-            <span className="text-gold">w blokach.</span>
-          </h1>
-
-          <p className="mt-6 max-w-xl text-bone/75 text-[15px] sm:text-base leading-relaxed">
-            RZKCITY to autorski klimat — RZKSMP i Skyblock z dusznym, neonowym wibem.
-            Buduj, handluj, walcz. Po cichu albo bardzo głośno.
-          </p>
-
-          {/* IP + copy */}
-          <div className="mt-10 inline-flex items-stretch border border-gold/30 bg-ink/60 backdrop-blur-sm rounded-sm overflow-hidden shadow-gold-glow">
-            <div className="px-5 py-3 flex items-center gap-3">
-              <span className="text-[10px] tracking-[0.3em] uppercase text-bone/50">IP</span>
-              <span className="ip-chip text-gold-bright text-lg">{IP}</span>
+          <div className="hero-glass max-w-3xl rounded-[2rem] px-5 py-6 sm:px-8 sm:py-8 lg:px-10 lg:py-10">
+            <div className="flex items-center gap-3 text-[11px] tracking-[0.32em] uppercase text-gold-bright/90 mb-6">
+              <span className="w-8 h-px bg-gold/70" />
+              Serwer Minecraft · PL
             </div>
-            <button
-              onClick={copyIp}
-              aria-label="Skopiuj adres IP serwera"
-              className="px-5 border-l border-gold/30 text-[11px] tracking-[0.25em] uppercase text-bone hover:text-ink hover:bg-gold-bright transition-colors duration-300 btn-gold"
-            >
-              {copied ? 'Skopiowano' : 'Kopiuj'}
-            </button>
-          </div>
 
-          <div className="mt-5 text-[12px] tracking-[0.2em] uppercase text-bone/45">
-            Wersja: 1.20+ · Java edition
+            <h1 className="hero-title-readable uppercase leading-[0.92] tracking-[-0.055em] text-[clamp(2.7rem,7vw,6.7rem)]">
+              Nocne miasto<br />
+              <span className="text-gold-bright">w blokach.</span>
+            </h1>
+
+            <p className="mt-6 max-w-xl text-bone/86 text-[15px] sm:text-[17px] leading-relaxed">
+              RZKCITY to autorski klimat — RZKSMP i Skyblock z dusznym, neonowym wibem.
+              Buduj, handluj, walcz. Po cichu albo bardzo głośno.
+            </p>
+
+            {/* IP + copy */}
+            <div className="mt-10 inline-flex items-stretch border border-gold/35 bg-ink/70 backdrop-blur-md rounded-xl overflow-hidden shadow-gold-glow">
+              <div className="px-5 py-3 flex items-center gap-3">
+                <span className="text-[10px] tracking-[0.3em] uppercase text-bone/60">IP</span>
+                <span className="ip-chip text-gold-bright text-lg">{IP}</span>
+              </div>
+              <button
+                onClick={copyIp}
+                aria-label="Skopiuj adres IP serwera"
+                className="px-5 border-l border-gold/30 text-[11px] tracking-[0.25em] uppercase text-bone hover:text-ink hover:bg-gold-bright transition-colors duration-300 btn-gold"
+              >
+                {copied ? 'Skopiowano' : 'Kopiuj'}
+              </button>
+            </div>
+
+            <div className="mt-5 text-[12px] tracking-[0.2em] uppercase text-bone/55">
+              Wersja: 1.20+ · Java edition
+            </div>
           </div>
         </div>
 
